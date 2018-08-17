@@ -1,3 +1,122 @@
 // Place all the styles related to the Cocktail controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.banner {
+  background-image: url('https://images.unsplash.com/photo-1473429174434-a8a8d5e0dc2e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=703b6db7761c9073368fd199592e6c6c&auto=format&fit=crop&w=1051&q=80');
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+/* Zoom In #2 */
+.hover02 figure img {
+  width: 300px;
+  height: auto;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.hover02 figure:hover img {
+  width: 350px;
+}
+#navbar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    // background: #002;
+    background: opacity 0.5;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#navbar li {
+    position: relative;
+    float: left;
+    line-height: 60px;
+    background: inherit;
+    text-align: center;
+    transition: all .2s;
+}
+
+#navbar li a {
+    position: relative;
+    display: block;
+    padding: 0 20px;
+    line-height: inherit;
+    color: white;
+    text-decoration: none;
+}
+
+#navbar li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    width: 60px;
+    height: 60px;
+    background: #250;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    transition: all 0, background .2s;
+}
+#navbar li:hover:before {
+    margin-top: 1px;
+    border-radius: 50% 50% 0 50%;
+    transition: all .1s, background .2s, margin-top .2s cubic-bezier(.5,30,.2,0);
+}
+#navbar li:hover,
+#navbar li:hover:before {
+    background: #FC4C02;
+}
+#navbar li.active,
+#navbar li.active:before {
+    background: opacity 0.7;
+}
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
+}

@@ -1,5 +1,20 @@
+<ul id="navbar">
+    <li class="active"><a href="#">Home</a></li>
+    <li><%= link_to "New🍸", new_cocktail_path %></li>
+</ul>
+
+
+<div class="banner">
+  <div class="banner-content">
+    <h1>Cocktails  🍸 </h1>
+    <p> 🍸 </p>
+    <a class=><%= link_to "Create a new cocktail", new_cocktail_path, class: "btn btn-primary" %></a>
+  </div>
+</div>
+
 <div class="container">
-  <h1>Cocktails  🍸 </h1>
+  <!-- <h1>Cocktails  🍸 </h1> -->
+
   <div class="cocktails">
     <% @cocktails.each do |cocktail| %>
       <div class="cocktail">
@@ -8,4 +23,33 @@
     <% end %>
   </div>
   <%= link_to "Make a new cocktail", new_cocktail_path, class: "btn btn-primary" %>
+</div>
+
+<h2 id="demo02">2. Other drinks 🍸 </h2>
+<div class="hover02 column">
+  <div>
+    <figure><img src="https://images.unsplash.com/photo-1531387367216-681093c0279b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjF9&s=a7bc51239cbf027bba03230e4a92efcc&auto=format&fit=crop&w=1016&q=80" /></figure>
+    <span>🍸</span>
+  </div>
+  <div>
+    <figure><img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-0.3.5&s=344aef15f512c6a2beaf669822296352&auto=format&fit=crop&w=958&q=80" /></figure>
+    <span>🍸</span>
+  </div>
+  <div>
+    <figure><img src="https://images.unsplash.com/photo-1523371054106-bbf80586c38c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fb1bd19c5235effb1efaf7ed93231713&auto=format&fit=crop&w=934&q=80" /></figure>
+    <span>🍸</span>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fa fa-github"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made by Andy Levis <i class="fa fa-heart"></i> at Le Wagon
+  </div>
 </div>
