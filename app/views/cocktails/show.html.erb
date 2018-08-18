@@ -1,21 +1,37 @@
-<div class="container">
-  <h1><%= @cocktail.name %></h1>
+<ul id="navbar">
+    <li class="active"><a href="#">Home</a></li>
+    <!-- <li><%= link_to "New🍸", new_cocktail_path %></li> -->
+</ul>
+
+
+<div class="banner-show">
+  <div class="banner-content">
+    <h1><%= @cocktail.name %></h1>
 
   <h3>Add ingredients</h3>
+
   <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.association :ingredient %>
     <%= f.input :description %>
     <%= f.submit "Add", class: "btn btn-primary"%>
   <% end %>
 
-  <div class="ingredients">
+
+
     <% @cocktail.doses.each do |dose| %>
       <div class="ingredient">
         <p><%= dose.description %> of <%= dose.ingredient.name %>
-          <%= link_to "Remove",dose_path(dose.id, method: :delete %>
+          <%= link_to "Remove", cocktail_dose_path(dose.id), method: :delete %>
         </p>
       </div>
     <% end %>
+
+</div>
+</div>
+
+
+
+
   </div>
-  <%= link_to "Back", cocktails_path, class: "btn btn-primary" %>
+  <%= link_to "its on its way !", cocktails_path, class: "btn btn-primary" %>
 </div>

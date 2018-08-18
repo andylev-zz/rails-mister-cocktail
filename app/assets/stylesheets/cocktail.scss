@@ -120,3 +120,86 @@
 .footer .fa-heart {
   color: #D23333;
 }
+.banner-new {
+  background-image: url('https://images.unsplash.com/photo-1522755500301-ce39e75b658d?ixlib=rb-0.3.5&s=9476f05de75987b5f09b54b444a331b0&auto=format&fit=crop&w=1500&q=80');
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-show {
+  background-image: url('https://images.unsplash.com/photo-1526235453614-3e8e03c00f4e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=301d5e888fc703d12dde63ae59a6d811&auto=format&fit=crop&w=700&q=60');
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flip-container{
+  width: 25%;
+  float: left;
+  text-align: center;
+  height: 300px;
+}
+
+.flip3D h3{
+  color: #ffffff;
+  font-size: 1.5em;
+  position: relative;
+  top: 30%;
+}
+
+.flip3D{ width:250px; height:210px; margin:0 auto; cursor: pointer;/*float:left;*/ }
+.flip3D > .front{
+  position:absolute;
+  -webkit-transform: perspective( 600px ) rotateY( 0deg );
+  -ms-transform: perspective( 600px ) rotateY( 0deg );
+  transform: perspective( 600px ) rotateY( 0deg );
+  background-image: url(https://tinyurl.com/y9rlzzdy);; width:240px; height:200px; border-radius: 2px;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility:  hidden;
+  backface-visibility: hidden;
+  transition: -webkit-transform .5s linear 0s;
+  transition: -ms-transform .5s linear 0s;
+  transition: transform .5s linear 0s;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+.flip3D > .back{
+  position:absolute;
+  -webkit-transform: perspective( 600px ) rotateY( 180deg );
+  transform: perspective( 600px ) rotateY( 180deg );
+  background-image:url(https://tinyurl.com/yd2o2zmq); width:240px; height:200px; border-radius: 2px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: -webkit-transform .5s linear 0s;
+  transition: transform .5s linear 0s;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.flip3D:hover > .front{
+  -webkit-transform: perspective( 600px ) rotateY( -180deg );
+  transform: perspective( 600px ) rotateY( -180deg );
+}
+
+.flip3D:hover > .back{
+  animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+
+  -webkit-transform: perspective( 600px ) rotateY( 0deg );
+  transform: perspective( 600px ) rotateY( 0deg );
+}
+
+

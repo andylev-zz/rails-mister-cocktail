@@ -1,45 +1,109 @@
+<html>
+  <head>
+    <title>Cocktails</title>
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="DPyVVHMIbjEuasKWkBxZidk20K+P/vPgrdu+oZpY6KFUvfh54UuTtcMzd1mVC/trh4jb586A+X1COw5bxvyPpw==" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" media="all" href="/assets/application-fb2688522f27ef5dc4a80b713dca32773a83e3c9c2533473c0daa507bca1544b.css" data-turbolinks-track="reload" />
+    <script src="/assets/application-e8cad604caacf8b819d144d3c75378ac96806728fb7d5e41f239c29e65492a33.js" data-turbolinks-track="reload"></script>
+  </head>
+
+
 <ul id="navbar">
     <li class="active"><a href="#">Home</a></li>
     <li><%= link_to "New🍸", new_cocktail_path %></li>
+    <li><%= link_to "Custom", new_cocktail_path %></li>
+</ul>
 </ul>
 
 
 <div class="banner">
   <div class="banner-content">
-    <h1>Cocktails  🍸 </h1>
+    <h1>Cocktails delivered wherever you are !🍸 </h1>
     <p> 🍸 </p>
-    <a class=><%= link_to "Create a new cocktail", new_cocktail_path, class: "btn btn-primary" %></a>
+    <a class=><%= link_to "Mix a new cocktail", new_cocktail_path, class: "btn btn-primary" %></a>
   </div>
 </div>
+<br>
+</br>
 
-<div class="container">
-  <!-- <h1>Cocktails  🍸 </h1> -->
+<div class="flip-container">
+          <div class="flip3D">
+            <div class="back" ><h3>Delivered</h3></div>
+            <div class="front" ><h3>Drinks </h3></div>
+          </div>
+        </div>
+<div class="flip-container">
+          <div class="flip3D">
+            <div class="back" ><h3>Delivered</h3></div>
+            <div class="front" ><h3>Drinks </h3></div>
+          </div>
+        </div>
+<div class="flip-container">
+          <div class="flip3D">
+            <div class="back" ><h3>Delivered</h3></div>
+            <div class="front" ><h3>Drinks </h3></div>
+          </div>
+        </div>
+<div class="flip-container">
+          <div class="flip3D">
+            <div class="back" ><h3>Delivered</h3></div>
+            <div class="front" ><h3>Drinks </h3></div>
+          </div>
+        </div>
+      </div>
+</div>
 
-  <div class="cocktails">
-    <% @cocktails.each do |cocktail| %>
+<div class="flip-container">
+          <div class="flip3D">
+            <div class="back" ><h3>anywhere</h3></div>
+            <div class="front" ><h3>Drinks </h3></div>
+          </div>
+        </div>
+<div class="flip-container">
+          <div class="flip3D">
+            <div class="back" ><h3>anywhere</h3></div>
+            <div class="front" ><h3>Drinks </h3></div>
+          </div>
+        </div>
+<div class="flip-container">
+          <div class="flip3D">
+            <div class="back" ><h3>anywhere</h3></div>
+            <div class="front" ><h3>Drinks </h3></div>
+          </div>
+        </div>
+<div class="flip-container">
+          <div class="flip3D">
+            <div class="back" ><h3>anywhere</h3></div>
+            <div class="front" ><h3>Drinks </h3></div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
+<!-- <div class="container">
+  <!-- <div class="cocktails"> -->
+<!-- <h2 id="demo02">2. Your menu 🍸 </h2> -->
+<!-- <div class="hover02 column">
+  <div>
+    <figure><img src="https://images.unsplash.com/photo-1531387367216-681093c0279b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjF9&s=a7bc51239cbf027bba03230e4a92efcc&auto=format&fit=crop&w=1016&q=80" /></figure>
+
+  </div> -->
+
+ <!--  <% @cocktails.each do |cocktail| %>
       <div class="cocktail">
         <p> <%= link_to cocktail.name, cocktail_path(cocktail.id) %> </p>
       </div>
     <% end %>
-  </div>
-  <%= link_to "Make a new cocktail", new_cocktail_path, class: "btn btn-primary" %>
-</div>
+  </div> -->
 
-<h2 id="demo02">2. Other drinks 🍸 </h2>
-<div class="hover02 column">
-  <div>
-    <figure><img src="https://images.unsplash.com/photo-1531387367216-681093c0279b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjF9&s=a7bc51239cbf027bba03230e4a92efcc&auto=format&fit=crop&w=1016&q=80" /></figure>
-    <span>🍸</span>
-  </div>
-  <div>
-    <figure><img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-0.3.5&s=344aef15f512c6a2beaf669822296352&auto=format&fit=crop&w=958&q=80" /></figure>
-    <span>🍸</span>
-  </div>
-  <div>
-    <figure><img src="https://images.unsplash.com/photo-1523371054106-bbf80586c38c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fb1bd19c5235effb1efaf7ed93231713&auto=format&fit=crop&w=934&q=80" /></figure>
-    <span>🍸</span>
-  </div>
-</div>
+
 
 <div class="footer">
   <div class="footer-links">
@@ -52,4 +116,5 @@
   <div class="footer-copyright">
     This footer is made by Andy Levis <i class="fa fa-heart"></i> at Le Wagon
   </div>
+</div>
 </div>
